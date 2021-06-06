@@ -52,6 +52,13 @@ public class VaccinationInfoController {
 
 		return vaccinationInfo;
 	}
+	
+	
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String getVaccinationInfos() {
+
+		return "Hello World";
+	}
 
 	@RequestMapping(value = "/pincode/{value}", method = RequestMethod.GET)
 	public List<VaccineInfoVo> getVaccinacionInfoByPincode(@PathVariable("value")String pincode) {
