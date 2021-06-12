@@ -20,6 +20,7 @@ public class VaccinationInfo {
 	private ObjectId id;
 	private List<VaccinationCenters> centers;
 	private String date;
+	private String district;
 
 	/**
 	 * @return the centers
@@ -61,6 +62,20 @@ public class VaccinationInfo {
 	 */
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	/**
+	 * @return the district
+	 */
+	public String getDistrict() {
+		return district;
+	}
+
+	/**
+	 * @param district the district to set
+	 */
+	public void setDistrict(String district) {
+		this.district = district;
 	}
 
 }

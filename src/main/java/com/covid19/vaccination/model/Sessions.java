@@ -15,6 +15,8 @@ public class Sessions {
 	private String min_age_limit;
 	private String available_capacity_dose1;
 	private String available_capacity_dose2;
+	private String vaccine;
+	private String date;
 
 	/**
 	 * @return the available_capacity
@@ -70,6 +72,34 @@ public class Sessions {
 	 */
 	public void setAvailable_capacity_dose2(String available_capacity_dose2) {
 		this.available_capacity_dose2 = available_capacity_dose2;
+	}
+
+	/**
+	 * @return the vaccine
+	 */
+	public String getVaccine() {
+		return vaccine;
+	}
+
+	/**
+	 * @param vaccine the vaccine to set
+	 */
+	public void setVaccine(String vaccine) {
+		this.vaccine = vaccine;
+	}
+
+	/**
+	 * @return the date
+	 */
+	public String getDate() {
+		return date;
+	}
+
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 }

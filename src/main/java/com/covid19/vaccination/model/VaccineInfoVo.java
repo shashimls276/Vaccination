@@ -17,6 +17,8 @@ public class VaccineInfoVo {
 	private String availableFirstDoseVaccine;
 	private String availableSecondDoseVaccine;
 	private String date;
+	private String availableCapacity;
+	private String vaccineName;
 
 	/**
 	 * @return the vaccinationCenter
@@ -114,6 +116,34 @@ public class VaccineInfoVo {
 	 */
 	public void setId(ObjectId id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the availableCapacity
+	 */
+	public String getAvailableCapacity() {
+		return availableCapacity;
+	}
+
+	/**
+	 * @param availableCapacity the availableCapacity to set
+	 */
+	public void setAvailableCapacity(String availableCapacity) {
+		this.availableCapacity = availableCapacity;
+	}
+
+	/**
+	 * @return the vaccineName
+	 */
+	public String getVaccineName() {
+		return vaccineName;
+	}
+
+	/**
+	 * @param vaccineName the vaccineName to set
+	 */
+	public void setVaccineName(String vaccineName) {
+		this.vaccineName = vaccineName;
 	}
 
 }
