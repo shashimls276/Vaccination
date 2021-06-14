@@ -23,9 +23,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-	name: hello
-	labels:
-  		app: hello
+  name: hello
+  labels:
+    app: hello
 spec:
 ports:
   - port: 8081
