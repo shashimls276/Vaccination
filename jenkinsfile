@@ -4,7 +4,11 @@ pipeline {
      environment { 
         registry = "shashimls276/vaccination" 
         registryCredential = 'dockerhub_id' 
-        dockerImage = '' 
+        dockerImage = ''
+        PROJECT_ID = 'geometric-vim-314208'
+        CLUSTER_NAME = 'ci-cd-cluster'
+        LOCATION = 'asia-south1-a'
+        CREDENTIALS_ID = 'gke' 
     }
 
     tools {
@@ -54,11 +58,18 @@ pipeline {
             }
         }
         
-        stage('Run Image'){
-            steps {
-                sh 'docker run -dp 8081:8081 $registry:$BUILD_NUMBER'
+        stage('Deploy to GKE') {
+            steps{
+                sh "sed -i 's/hello:latest/hello:${env.BUILD_ID}/g' deployment.yaml"
+                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
             }
-        }
+        }  
+        
+       // stage('Run Image'){
+         //   steps {
+           //     sh 'docker run -dp 8081:8081 $registry:$BUILD_NUMBER'
+           // }
+       // }
         
     }
 }
