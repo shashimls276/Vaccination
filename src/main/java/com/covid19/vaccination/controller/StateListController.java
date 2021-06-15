@@ -39,7 +39,7 @@ public class StateListController {
 	public StatusMessageVo getServerIp() throws UnknownHostException{
 		StatusMessageVo vo = new StatusMessageVo();
 		String ipAddress = InetAddress.getLocalHost().getHostName();
-		vo.setStatusMessage("ipAddress");
+		vo.setStatusMessage(ipAddress);
 		
 		return vo;
 	}
