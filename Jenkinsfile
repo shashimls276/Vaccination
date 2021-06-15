@@ -27,15 +27,16 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Code Checkout') {
             steps {
-                // Get some code from a GitHub repository
                 git 'https://github.com/shashimls276/Vaccination.git'
-
-                // Run Maven on a Unix agent.
+            }
+        }
+        
+         stage('Code Build') {
+            steps {
                 sh "mvn clean install"
             }
-
         }
         
         stage('Docker image Build'){
@@ -47,7 +48,7 @@ pipeline {
             }
         }
         
-        stage('Deploy our image') { 
+        stage('Image push to Hub') { 
 
             steps { 
                 script { 
