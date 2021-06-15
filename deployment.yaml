@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: hello
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
     spec:
      containers:
      - name: hello
-       image: "shashimls276/vaccination:58"
+       image: "shashimls276/vaccination:59"
        ports:
        - containerPort: 8080        
 
