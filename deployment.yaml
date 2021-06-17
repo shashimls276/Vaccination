@@ -15,7 +15,7 @@ spec:
     spec:
      containers:
      - name: hello
-       image: "shashimls276/vaccination:64"
+       image: "shashimls276/vaccination:65"
        ports:
        - containerPort: 8080        
 
