@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script{
                     //sh "docker image build -t demo ."
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = docker.build registry + ":${env.BUILD_ID}"
                 }
             }
         }
