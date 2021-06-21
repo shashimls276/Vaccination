@@ -42,7 +42,7 @@ public class VaccinationService {
 		SimpleDateFormat sf = new SimpleDateFormat("dd-MM-yyyy");
 		StringBuilder sb = new StringBuilder();
 		sb.append(VaccinationAppConstants.vaccineSearchUrlByDistrict).append("district_id=").append(districtId)
-				.append("&date=").append("18/06/2021");
+				.append("&date=").append("21/06/2021");
 		System.out.println(sb.toString());
 
 		ResponseEntity<VaccinationInfo> response = restTemplate.exchange(sb.toString(), HttpMethod.GET, entity,

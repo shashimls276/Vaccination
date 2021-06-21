@@ -38,7 +38,7 @@ public class VaccinationSlotsSearch {
 		if (!CommonsUtil.isBlank(vaccinationSlotSearchVo.getPincode())) {
 			StringBuilder sb = new StringBuilder();
 			sb.append(VaccinationAppConstants.vaccineSearchUrlByPincode).append("pincode=")
-					.append(vaccinationSlotSearchVo.getPincode()).append("&date=").append("18/06/2021");
+					.append(vaccinationSlotSearchVo.getPincode()).append("&date=").append("21/06/2021");
 
 			HttpEntity<String> entity = CommonsUtil.getHttpEntity();
 			ResponseEntity<VaccinationInfo> response = restTemplate.exchange(sb.toString(), HttpMethod.GET, entity,
